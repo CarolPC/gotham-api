@@ -6,17 +6,17 @@ const CreateCharacterService = {
     return new Promise((resolve, reject) => {
       characterObject = new charactersModel(character);
 
-       characterObject.save()
-          .then((characterCreated) => {
-            resolve({
-              data: {
-                character: characterCreated
-              }
-            });
-          })
-          .catch((err) => {
-            reject(err);
+      characterObject.save()
+        .then((characterCreated) => {
+          resolve({
+            data: {
+              character: characterCreated
+            }
           });
+        })
+        .catch((err) => {
+          reject(err);
+        });
     })
   }
 };

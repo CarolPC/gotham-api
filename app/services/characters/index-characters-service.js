@@ -12,7 +12,7 @@ const ListCharactersService = {
             reject(err);
           }
 
-        return resolve(charactersList);
+          return resolve(charactersList);
         });
     });
   }
