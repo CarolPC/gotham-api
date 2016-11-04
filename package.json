@@ -1,0 +1,38 @@
+{
+  "name": "gotham-api",
+  "version": "1.0.0",
+  "description": "Simple API to be used in Node Sorocaba - Meetup #1",
+  "main": "index.js",
+  "dependencies": {
+    "app-module-path": "^2.1.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.6.6",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "mongoose": "^4.6.6",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "NODE_PATH=. node index.js",
+    "start:dev": "NODE_PATH=. nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarolPC/gotham-api.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongo"
+  ],
+  "author": "Carolina Pascale Campos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarolPC/gotham-api/issues"
+  },
+  "homepage": "https://github.com/CarolPC/gotham-api#readme"
+}
