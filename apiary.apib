@@ -1,80 +1,49 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://localhost:3000/
 
-# carolinapascalecampos
+# Gotham
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Gotham is a simple API to be used in "Node Sorocaba - Meetup #1".
 
-## Questions Collection [/questions]
+## Characters Collection [/characters]
 
-### List All Questions [GET]
+### List All Characters [GET]
 
 + Response 200 (application/json)
 
-        [
+        {
+          "data": [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+              "_id": "581c8c0e8ae4dbf68e92e178",
+              "name": "Batman",
+              "ocupation": "CEO of Wayne Enterprises",
+              "quote": "As a symbol I can be incorruptible. I can be everlasting.",
+              "__v": 0,
+              "firstAppearance": 1939
+            },
+            {
+              "_id": "581cb70702eec407ff7414dd",
+              "name": "Joker",
+              "ocupation": "Villain",
+              "quote": "Why so serious?",
+              "__v": 0,
+              "firstAppearance": 1940
             }
-        ]
+          ]
+        }
 
-### Create a New Question [POST]
+### Create a Character [POST]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+You may create your own character using this action. It takes a JSON
+object containing a name, ocupation, quote, and firstAppearance.
 
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "name": "James Gordon",
+            "ocupation": "Police Commissioner",
+            "quote": "Because he's not our hero.",
+            "firstAppearance": 1939
         }
 
 + Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
