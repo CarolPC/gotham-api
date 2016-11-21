@@ -1,0 +1,49 @@
+FORMAT: 1A
+HOST: http://localhost:3000/
+
+# Gotham
+
+Gotham is a simple API to be used in "Node Sorocaba - Meetup #1".
+
+## Characters Collection [/characters]
+
+### List All Characters [GET]
+
++ Response 200 (application/json)
+
+        {
+          "data": [
+            {
+              "_id": "581c8c0e8ae4dbf68e92e178",
+              "name": "Batman",
+              "ocupation": "CEO of Wayne Enterprises",
+              "quote": "As a symbol I can be incorruptible. I can be everlasting.",
+              "__v": 0,
+              "firstAppearance": 1939
+            },
+            {
+              "_id": "581cb70702eec407ff7414dd",
+              "name": "Joker",
+              "ocupation": "Villain",
+              "quote": "Why so serious?",
+              "__v": 0,
+              "firstAppearance": 1940
+            }
+          ]
+        }
+
+### Create a Character [POST]
+
+You may create your own character using this action. It takes a JSON
+object containing a name, ocupation, quote, and firstAppearance.
+
++ Request (application/json)
+
+        {
+            "name": "James Gordon",
+            "ocupation": "Police Commissioner",
+            "quote": "Because he's not our hero.",
+            "firstAppearance": 1939
+        }
+
++ Response 201 (application/json)
