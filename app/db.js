@@ -1,3 +1,4 @@
+require('dotenv').load();
 const mongoose = require('mongoose');
 const mongoSchema = mongoose.Schema;
 
